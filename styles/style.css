@@ -39,6 +39,9 @@ h1, h2, h3, h4, p {
 .navlink:hover {
   border-bottom: 3px solid #FFED03; }
 
+.navlink:active {
+  font-weight: bold; }
+
 .feature {
   max-width: 450px;
   margin-top: 90px;
@@ -118,7 +121,7 @@ a:hover {
 
 .members {
   list-style: none;
-  border-left: 4px solid #FFED03;
+  border-left: 4px solid #fff683;
   padding-left: 1rem; }
 
 li:active {
@@ -129,9 +132,13 @@ li:active {
   text-align: center; }
 
 .up {
-  padding: 7px;
+  padding-top: 7px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 8px;
+  height: 20px;
   border: 3px solid #FFED03;
-  border-radius: 15%;
+  border-radius: 50%;
   color: #FFED03;
   box-shadow: 4px 4px rgba(0, 0, 0, 0.1); }
 
@@ -140,8 +147,7 @@ li:active {
   color: white; }
 
 .up:focus {
-  box-shadow: 0px 0px rgba(0, 0, 0, 0.1);
-  margin-top: 200px; }
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.1); }
 
 .mail {
   border-bottom: 2px solid grey;
@@ -171,6 +177,9 @@ summary:focus {
 
 details[open] .sum {
   background-color: #FFED03; }
+
+summary:active > .sum {
+  box-shadow: 0px 0px rgba(0, 0, 0, 0.1); }
 
 details[open] .cat {
   color: #FFED03; }

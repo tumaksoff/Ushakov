@@ -13,7 +13,6 @@ body
 h1,h2,h3,h4,p
   opacity: 0.8
 
-
 .container
   text-align: center
   max-width: 500px
@@ -46,6 +45,9 @@ h1,h2,h3,h4,p
 .navlink:hover
   border-bottom: 3px solid $accent
   
+.navlink:active
+  font-weight: bold
+
 .feature
   max-width: 450px
   margin-top: 90px
@@ -123,7 +125,7 @@ a:hover
 
 .members
   list-style: none
-  border-left: 4px solid $accent
+  border-left: 4px solid lighten($accent, 25%)
   padding-left: 1rem
 
 li:active
@@ -134,9 +136,14 @@ li:active
   text-align: center
 
 .up
-  padding: 7px
+  padding-top: 7px
+  padding-left: 10px
+  padding-right: 10px
+  padding-bottom: 8px
+  height: 20px
+
   border: 3px solid $accent
-  border-radius: 15%
+  border-radius: 50%
   color: $accent
   box-shadow: $flatshadow
 
@@ -146,7 +153,9 @@ li:active
 
 .up:focus
   box-shadow: $noshadow
-  margin-top: 200px
+
+.upi
+  line-height:inherit
 
 .mail
   border-bottom: 2px solid grey
@@ -176,6 +185,9 @@ summary:focus
 
 details[open] .sum
   background-color: $accent
+
+summary:active > .sum
+  box-shadow: $noshadow
 
 details[open] .cat
   color: $accent
