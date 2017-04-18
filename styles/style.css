@@ -2,8 +2,13 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,400i");
 body {
   margin: 0;
-  font-family: 'Roboto Mono', monospace;
+  font-family: 'Roboto Mono', monospace; }
+
+h1, h2, h3, h4, p {
   opacity: 0.8; }
+
+h3 {
+  text-shadow: 2px 2px rgba(0, 0, 0, 0.1); }
 
 .container {
   text-align: center;
@@ -27,20 +32,10 @@ body {
 .links {
   margin-top: 20px; }
 
-.logo {
-  width: 40px;
-  margin: 4px; }
-
-.logo:hover {
-  opacity: 0.5;
-  cursor: pointer; }
-
 .navlink {
   margin-right: 18px;
-  font-family: 'Roboto Mono', monospace;
-  font-weight: 400;
   font-size: 13.5px;
-  padding-bottom: 13.5px;
+  padding-bottom: 13.0px;
   transition: all 0.2s ease-in-out;
   border-bottom: 3px solid transparent; }
 
@@ -116,7 +111,6 @@ body {
 
 a {
   color: black;
-  opacity: 0.8;
   text-decoration: none;
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
@@ -156,6 +150,9 @@ li:active {
   border-bottom: 2px solid grey;
   padding-bottom: 3px; }
 
+.mail:hover {
+  border-bottom: 2px solid #FFED03; }
+
 summary::-webkit-details-marker {
   display: none; }
 
@@ -169,7 +166,11 @@ summary:focus {
   height: 15px;
   border-radius: 50%;
   position: absolute;
-  box-shadow: 2px 2px rgba(0, 0, 0, 0.1); }
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }
+
+.cat {
+  transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }
 
 details[open] .sum {
   background-color: #FFED03; }
