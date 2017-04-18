@@ -2,10 +2,14 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,400i')
 
 $accent: #FFED03
+$flatshadow: 4px 4px rgba(0,0,0,0.1)
+$noshadow: 0px 0px rgba(0,0,0,0.1)
+$ultraflatshadow: 2px 2px rgba(0,0,0,0.1)
 
 body
   margin: 0
-  font-family: 'Roboto', monospace
+  font-family: 'Roboto Mono', monospace
+  opacity: 0.8
   
 .container
   text-align: center
@@ -42,20 +46,25 @@ body
   font-family: 'Roboto Mono', monospace
   font-weight: 400
   font-size: 13.5px
-  padding-bottom: 13px
-  transition: padding-bottom .2s ease-in-out, box-shadow .2s ease-in-out
+  padding-bottom: 13.5px
+  transition: all 0.2s ease-in-out
+  border-bottom: 3px solid transparent
   
 .navlink:hover
-  -webkit-box-shadow: 0px 3px 0px 0px $accent
+  border-bottom: 3px solid $accent
   
 .feature
   max-width: 450px
   margin-top: 90px
+  transition: max-width 0.2s ease-in-out
   
 .feature:hover
   opacity: 0.5
   cursor: pointer
-  
+
+.feature:active
+  max-width: 70%
+
 .quote
   margin-top: 15px
   display: block
@@ -68,23 +77,19 @@ body
   margin-top: 65px
   text-align: left
   
-.lowop
-  font-family: 'Roboto Mono', monospace
-  opacity: 0.8
-  
 .pbody
   height: 100px
   border-radius: 4px
   padding: 15px
-  border: 4px solid transparent
+  border: 3px solid transparent
 
 .pbody:hover
   cursor: pointer
-  border: 4px solid $accent
-  box-shadow: 4px 4px rgba(0,0,0,0.1)
-  
+  border: 3px solid $accent
+  box-shadow: $flatshadow
+
 .pbody:active
-  box-shadow: 0px 0px rgba(0,0,0,0.1)
+  box-shadow: $noshadow
   margin-top: 4px
   
 .picon
@@ -94,7 +99,11 @@ body
   background-color: #eee
   text-align: center
   justify-content: center
+  transition: background-color 0.3s ease
   
+.pbody:hover > .picon
+  background-color: transparent
+
 .pdata
   margin-left: 150px
   position: absolute
@@ -103,10 +112,6 @@ body
 .pdata.info
   margin-top: 13px
   max-width: 250px
-  
-.highlight
-  color: $accent
-  cursor: pointer
   
 .appicon
   width: 50px
@@ -129,14 +134,65 @@ a:hover
   border-left: 4px solid $accent
   padding-left: 1rem
 
+li:active
+  font-size: 90%
+
 .copyright
   margin-left: 15px
   font-size: 12px
   text-align: center
 
+.up
+  padding: 7px
+  border: 3px solid $accent
+  border-radius: 15%
+  color: $accent
+  box-shadow: $flatshadow
+
+.up:hover
+  background-color: $accent
+  color: white
+
+.up:focus
+  box-shadow: $noshadow
+  margin-top: 200px
+
+.mail
+  border-bottom: 2px solid grey
+  padding-bottom: 3px
+
+summary::-webkit-details-marker 
+  display: none
+
+summary:focus
+  outline: none
+
+.sum
+  background-color: transparent
+  border: 2px solid $accent
+  width: 15px
+  height: 15px
+  border-radius: 50%
+  position: absolute
+  box-shadow: $ultraflatshadow
+
+details[open] .sum
+  background-color: $accent
+
+details[open] .cat
+  color: $accent
+
+.cat
+  margin-left: 40px
+
+.cat:hover
+  cursor: pointer
+
+::selection
+  background: $accent
+  color: darken($accent, 50%)
+
 @media screen and (max-width: 450px)
-    .nav
-        display: none
 
     .feauture
         max-width: 250px   
